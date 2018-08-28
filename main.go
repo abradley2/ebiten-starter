@@ -3,8 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/abradley2/pew-pew-pew-lasors/lib"
 	"github.com/hajimehoshi/ebiten"
+)
+
+const (
+	gameHeight = 800
+	gameWidth  = 1280
 )
 
 var op = &ebiten.DrawImageOptions{}
@@ -22,5 +26,5 @@ func update(screen *ebiten.Image) error {
 }
 
 func main() {
-	ebiten.Run(update, lib.GameWidth, lib.GameHeight, 0.25, "Pew Pew Pew")
+	ebiten.Run(update, gameWidth, gameHeight, 1, "Ebiten Starter")
 }
